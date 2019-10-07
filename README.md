@@ -1,5 +1,11 @@
 # vuejs-todolist
 
+L'idée ici est de découper la TodoList en 3 composants :
+
+* TodoList.vue (composant principal)
+* TodoInputText.vue (input)
+* TodoListItem.vue (liste ul > li)
+
 ## Project setup
 ```
 npm install

@@ -1,6 +1,6 @@
 <template>
 <div>
-  <TodoInputText v-model="newTodoText" />
+  <TodoInputText v-model="newTodoText" v-on:keydown.enter="addTodo" v-on:click="addTodo"/>
   <TodoListItem :todos="todos" />
 </div>
 </template>
@@ -24,7 +24,11 @@ export default {
     },
     methods: {
         addTodo(){
-
+            const trimmedText = this.newTodoText.trim();
+            if (trimmedText) {
+                this.todos.push(trimmedText);
+                this.newTodoText = "";
+            }
         }
     }
 };

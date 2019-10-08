@@ -1,5 +1,5 @@
 <template>
-  
+  <TodoInputText />
 </template>
 
 <script>

@@ -10,9 +10,14 @@ export default {
     name: "app",
     components: {
         TodoInputText
+    },
+    data() {
+        return {
+            todos: ["Tomates", "Lait", "Gâteaux"]
+        };
     }
 
-}
+};
 </script>
 
 <style>

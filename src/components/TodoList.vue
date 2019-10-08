@@ -21,8 +21,12 @@ export default {
             newTodoText: "",
             todos: ["Tomates", "Lait", "Gâteaux"]
         };
-    }
+    },
+    methods: {
+        addTodo(){
 
+        }
+    }
 };
 </script>
 

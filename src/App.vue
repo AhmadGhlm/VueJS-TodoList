@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="container">
-        <h1 class="title is-1">My TodoList</h1>
+        <h1 class="title is-1">My Todo List</h1>
     </div>
 </template>
 
@@ -18,6 +18,6 @@ export default {
 
 <style lang="scss">
     .container{
-        margin: 100px 100px 0 100px;
+        margin: 100px 60px 0 100px;
     }
 </style>

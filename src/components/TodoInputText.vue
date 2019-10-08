@@ -1,6 +1,6 @@
 <template>
   <div class="control has-icons-left has-icons-right">
-      <input class="input is-medium" type="text" :value="value" placeholder="Enter your task">
+      <input class="input is-medium" type="text" placeholder="Enter your task" :value="value" v-on="listeners" />
       <span class="icon is-left">
           <i class="fas fa-check"></i>
       </span>
@@ -9,8 +9,18 @@
 
 <script>
 export default {
-    props: ["value"]
-}
+    props: ["value"],
+    computed: {
+    listeners() {
+      return {
+        // Pass all component listeners directly to input
+        ...this.$listeners,
+        // Override input listener to work with v-model
+        input: event => this.$emit("input", event.target.value)
+      };
+    }
+  }
+};
 </script>
 
 <style>
